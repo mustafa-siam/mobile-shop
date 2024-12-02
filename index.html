@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phone hunter</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><a>Brands</a></li>
+              <li>
+                <a>Blog</a>
+                <ul class="p-2">
+                  <li><a>Anouncement</a></li>
+                  <li><a>Reviews</a></li>
+                </ul>
+              </li>
+              <li><a>About</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl">Metro Mart</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Brands</a></li>
+            <li>
+              <details>
+                <summary>Blog</summary>
+                <ul class="p-2">
+                  <li><a>Anouncement</a></li>
+                  <li><a>Reviews</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a>About</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn btn-accent">Sign Up</a>
+        </div>
+      </div>
+    </header>
+    <section>
+      <h1 class="text-center text-4xl font-semibold p-4">Shop from Metro Mart and <br>save an extra $35 off your new phone.</h1>
+      <p class="text-center text-base font-normal p-4">There are many variations of passages of Lorem Ipsum available, but the majority  <br> have suffered alteration in some form, by injected humou.</p>
+      <div class="flex justify-center">
+        <img src="banner.jpg.png" alt="">
+      </div>
+      <h2 class="text-center text-3xl font-medium p-4">Search your phone</h2>
+    </section>
+    <main class="container mx-auto mt-8">
+      <section class="bg-gray-100 p-4 m-4 flex justify-center items-center gap-4">
+        <input id="search-field" type="text" placeholder="Type here" class="input input-bordered input-secondary w-full lg:max-w-xs" />
+        <button onclick="handlesearch()" class="btn btn-accent">Search</button>
+      </section>
+          <section>
+            <div id="spin-loading" class="flex justify-center my-40 hidden">
+              <span class="loading loading-spinner loading-lg text-accent"></span>
+            </div>
+            <div id="phn-container"  class="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+            </div>
+            <div class="flex float-end py-5">
+              <button onclick="handleshow()" id="show-all" class="btn btn-accent hidden">Show All</button>
+            </div>
+          </section>
+          <section>
+                         <!-- Open the modal using ID.showModal() method -->
+<dialog id="show_details" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box bg-gray-200">
+    <div id="details-container">
+
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+          </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="phone.js"></script>
+</body>
+</html>
