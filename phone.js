@@ -27,7 +27,7 @@ showAll.classList.remove('hidden');
                     </figure>
                     <div class="card-body">
                       <h2 class="card-title">${phone.phone_name}</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <p>If a man chews mobiles whose mobile does he choose?</p>
                       <div class="card-actions justify-center">
                         <button onclick="handleshowdetail('${phone.slug}')"class="btn btn-primary">Show Details</button>
                       </div>
